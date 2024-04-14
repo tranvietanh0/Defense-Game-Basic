@@ -62,10 +62,10 @@ namespace VANH.DefenseBasic
             {
                 return;
             }
+            
             if (col.CompareTag("EnemyWeapon") && !m_isDeath)
             {
                 m_anim.SetTrigger(Const.DEAD_ANIM);
-                Debug.Log(m_isDeath);
                 m_isDeath = true;
             }
         }

@@ -30,7 +30,9 @@ namespace VANH.DefenseBasic
                 return;
             }
 
-            if (Vector2.Distance(m_player.transform.position, transform.position) <= atkDistance)
+            float distanceToPlayer = Vector2.Distance(m_player.transform.position, transform.position);
+
+            if (distanceToPlayer <= atkDistance)
             {
                 m_anim.SetBool(Const.ATTACK_ANIM, true);
                 m_rb.velocity = Vector2.zero;
@@ -39,6 +41,17 @@ namespace VANH.DefenseBasic
             {
                 m_rb.velocity = new Vector2(-m_speed, m_rb.velocity.y);
             }
+        }
+
+        public void Die()
+        {
+            if (IsComponentsNull())
+            {
+                return;
+            }
+            m_anim.SetTrigger(Const.DEAD_ANIM);
+            m_rb.velocity = Vector2.zero;
+            gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM);
         }
     }
 }
