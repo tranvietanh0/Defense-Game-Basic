@@ -9,6 +9,14 @@ namespace VANH.DefenseBasic
         public float spawnTime;
         public Enemy[] enemyPrabs;
         private bool m_isGameover;
+        private int m_score;
+
+        public int Score
+        {
+            get => m_score;
+            set => m_score = value;
+        }
+
         void Start()
         {
             StartCoroutine(SpawnEnemy());
