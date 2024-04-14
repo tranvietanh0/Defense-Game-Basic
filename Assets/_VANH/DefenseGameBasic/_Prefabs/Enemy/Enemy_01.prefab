@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3652914912333246088}
   - component: {fileID: 8763701958094377164}
   - component: {fileID: 938776148931240233}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6799578131343979001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.55, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,7 +94,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.14
+  m_Radius: 0.3
 --- !u!1 &8244780697336177730
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: -8625895629802717495}
   - component: {fileID: -1378817211255308569}
   - component: {fileID: 7167073320856733039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,9 +170,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1375422931
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 049219d338589e446b242bbaa0dba993, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -289,5 +289,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144670ae407e5064abdbf557509c5a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 2
-  atkDistance: 1
+  m_speed: 1.5
+  atkDistance: 1.5
