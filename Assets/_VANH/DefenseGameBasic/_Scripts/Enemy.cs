@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace VANH.DefenseBasic
 {
@@ -9,6 +10,8 @@ namespace VANH.DefenseBasic
     {
         [SerializeField] private float m_speed;
         [SerializeField] private float atkDistance;
+        [SerializeField] private int minCoinBonus;
+        [SerializeField] private int maxCoinBonus;
         private Animator m_anim;
         private Rigidbody2D m_rb;
         private Player m_player;
@@ -23,7 +26,7 @@ namespace VANH.DefenseBasic
         }
         public bool IsComponentsNull()
         {
-            return m_anim == null || m_rb == null || m_player == null;
+            return m_anim == null || m_rb == null || m_player == null || m_gm == null;
         }
         void Update()
         {
@@ -53,11 +56,10 @@ namespace VANH.DefenseBasic
             }
             m_anim.SetTrigger(Const.DEAD_ANIM);
             m_rb.velocity = Vector2.zero;
-            gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM);
-            if (m_gm)
-            {
-                m_gm.Score++;
-            }
+            gameObject.layer = LayerMask.NameToLayer(Const.DEAD_ANIM); 
+            m_gm.Score++;
+            int coinBonus = Random.Range(minCoinBonus, maxCoinBonus);
+            Pref.coins += coinBonus;
             Destroy(gameObject, 2f);
         }
     }
