@@ -359,7 +359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 170416164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 909348115}
+        m_TargetAssemblyTypeName: VANH.DefenseBasic.GameManager, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &170416164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,10 +595,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 375636620}
   - {fileID: 1145151173}
   - {fileID: 1101235698}
   - {fileID: 170416162}
+  - {fileID: 375636620}
   - {fileID: 217058211}
   - {fileID: 486499266}
   m_Father: {fileID: 1548778007}
@@ -1547,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &486499266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3067,7 +3079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &874832761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3236,6 +3248,7 @@ MonoBehaviour:
   - {fileID: 7167073320856733039, guid: b82bd109f7e63bd48a7fc55c4cf0a525, type: 3}
   - {fileID: 3310106296806198958, guid: 7d726aa60f6e0aa40a8dd0ccff5adf3c, type: 3}
   - {fileID: 6413798746184689292, guid: 29ff728542098364599ec64bbded3263, type: 3}
+  guiMng: {fileID: 207055767}
 --- !u!4 &909348116
 Transform:
   m_ObjectHideFlags: 0

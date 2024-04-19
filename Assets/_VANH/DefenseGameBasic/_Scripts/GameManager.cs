@@ -4,10 +4,11 @@ using UnityEngine;
 
 namespace VANH.DefenseBasic
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : MonoBehaviour, IComponentChecking
     {
         public float spawnTime;
         public Enemy[] enemyPrabs;
+        public GUIManager guiMng;
         private bool m_isGameover;
         private int m_score;
 
@@ -19,7 +20,23 @@ namespace VANH.DefenseBasic
 
         void Start()
         {
+            if (IsComponentsNull())
+            {
+                return;
+            }
+            guiMng.ShowGameGUI(false);
+            guiMng.UpdateMainCoins();
+        }
+
+        public void PlayGame()
+        {
             StartCoroutine(SpawnEnemy());
+            guiMng.ShowGameGUI(true);
+            guiMng.UpdateMainCoins();
+        }
+        public bool IsComponentsNull()
+        {
+            return guiMng == null;
         }
 
         // Update is called once per frame

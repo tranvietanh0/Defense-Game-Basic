@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144670ae407e5064abdbf557509c5a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 2
+  m_speed: 1.5
   atkDistance: 2
   minCoinBonus: 9
   maxCoinBonus: 15
